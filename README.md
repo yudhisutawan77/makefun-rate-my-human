@@ -37,6 +37,15 @@ Writes `/output/entry.txt` (or `$ENTRY_OUT/entry.txt` when set).
 No network, no secrets, no input files — the line is written fresh in
 `main.py` itself.
 
+## Verification
+
+```sh
+ENTRY_OUT=/tmp/rate-my-human python3 -P -s main.py && wc -c /tmp/rate-my-human/entry.txt
+```
+
+The entry is one line of 184 characters with no trailing newline,
+inside the 1–200 character gate.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
